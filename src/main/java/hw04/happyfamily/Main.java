@@ -3,7 +3,7 @@ package hw04.happyfamily;
 public class Main {
     public static void main(String[] args) {
         Pet pet=new Pet("","",5,75,new String[]{"sleep","eat","drink"});
-        pet.species="dog";
+        pet.species="Dog";
         pet.nickname="Rock";
         pet.eat();
         pet.respond();

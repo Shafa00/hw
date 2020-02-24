@@ -25,7 +25,7 @@ public class Pet {
 
     }
     public void eat(){
-        System.out.println("I am eating");
+        System.out.println("I am eating.");
     }
     public void respond(){
 

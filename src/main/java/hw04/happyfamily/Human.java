@@ -11,6 +11,7 @@ public class Human {
     Human father;
     String [][] schedule = new String[2][2];
     Pet pet=new Pet();
+
     public Human(String name,String surname,int year){
         this.name=name;
         this.surname=surname;
@@ -37,6 +38,7 @@ public class Human {
     public void greetPet(){
         System.out.printf("Hello, %s\n",pet.nickname);
     }
+
     public void describePet(){
         System.out.printf("I have a %s, he is %d years old, he is ",pet.species,pet.age);
         System.out.println((pet.trickLevel>50) ? "very sly" : "almost not sly");
