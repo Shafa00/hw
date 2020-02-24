@@ -9,15 +9,16 @@ public class Main {
         pet.respond();
         pet.foul();
         System.out.println("Person: "+pet.toString());
-        //Human
-        Human human=new Human("Micheal","Karleone",1997,90,"Viko Karleone","Jane Karleone");
+        Human human = new Human("Micheal","Karleone",1997,90,new Human("Jane","Karleone",1970),
+                new Human("Viko","Karleone",1968), new String[][]{{"Monday","Friday"},{"work","sleep"}});
         human.pet.nickname="Rock";
         human.pet.species="dog";
-        human.pet.tricklevel=75;
+        human.pet.trickLevel=75;
         human.pet.age=5;
         human.greetPet();
         human.describePet();
-        System.out.println("Full family: "+human.toString()+pet.toString());
+        System.out.println(human.toString());
+        System.out.println(pet.toString());
 
     }
 }

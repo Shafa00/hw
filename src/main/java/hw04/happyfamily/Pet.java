@@ -1,20 +1,25 @@
 package hw04.happyfamily;
 
+import java.util.Arrays;
+
 public class Pet {
     String species;
     String nickname;
     int age;
-    int tricklevel;
+    int trickLevel;
     String [] habits;
-    public Pet(String s,String n,int a,int t_l,String[]h){
-        s=species;
-        age=a;
-        tricklevel=t_l;
-        habits=h;
+
+    public Pet(String species,String nickname){
+        this.species=species;
+        this.nickname=nickname;
     }
-    public Pet(String s,String n){
-        s=species;
-        n=nickname;
+
+    public Pet(String species,String nickname,int age,int trickLevel,String [] habits){
+        this.species=species;
+        this.nickname=nickname;
+        this.age=age;
+        this.trickLevel=trickLevel;
+        this.habits=habits;
     }
     public Pet(){
 
@@ -29,13 +34,15 @@ public class Pet {
     public void foul(){
         System.out.println("I need to cover it up.");
     }
-    public String toString(){
-        String temp ="";
-        for (String s:habits) {
-            temp+= s + " ";
 
-        }
-        return(" species="+species+",nickname="+nickname+",age="+age+",tricklevel="+tricklevel+",habits="+temp);
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "species='" + species + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", age=" + age +
+                ", trickLevel=" + trickLevel +
+                ", habits=" + Arrays.toString(habits) +
+                '}';
     }
-
 }
