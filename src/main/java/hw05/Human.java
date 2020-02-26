@@ -10,11 +10,13 @@ public class Human {
     private int iq;
     private String [][] schedule;
     Family family;
-    public Human(String Name,String Surname){
-        name=Name;
-        surname=Surname;
-    }
     public  Human(){}
+
+    public Human(String name,String surname){
+        this.name=name;
+        this.surname=surname;
+    }
+
     public String getName() {
         return name;
     }
@@ -82,11 +84,11 @@ public class Human {
     @Override
     public String toString() {
         return "Human{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", year=" + year +
-                ", iq=" + iq +
-                ", schedule=" + Arrays.toString(getSchedule())+
+                "name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
+                ", year=" + getYear() +
+                ", iq=" + getIq() +
+                ", schedule=" + Arrays.deepToString(getSchedule())+
                 '}';
     }
 

@@ -91,14 +91,4 @@ public class Family {
         return 2+children.length;
     }
 
-    @Override
-    public String toString() {
-        return "Family{" +
-                "mother=" + getMother() +
-                ", father=" + getFather() +
-                ", children=" + Arrays.toString(getChildren()) +
-                ", pet=" + getPet() +
-                ", countfamily=" + countFamily() +
-                '}';
-    }
 }

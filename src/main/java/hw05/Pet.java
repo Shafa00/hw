@@ -63,7 +63,7 @@ public class Pet {
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(species, nickname, age, trickLevel);
+        int result = Objects.hash(species, nickname, age);
         result = 31 * result + Arrays.hashCode(habits);
         return result;
     }
