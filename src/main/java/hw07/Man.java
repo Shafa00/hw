@@ -1,14 +1,13 @@
 package hw07;
 
-public class Man extends Human {
-    public Man(String Name, String Surname, int Year, int IQ, Human Mother, Human Father) {
-        super(Name, Surname, Year, IQ, Mother, Father);
+public final class Man extends Human {
+    public Man(String name, String surname, int year, int iq, String[][] schedule, Human mother, Human father) {
+        super(name, surname, year, iq, schedule, mother, father);
     }
 
-    String species=Species.UNKNOWN.name();
     @Override
     public void greetPet() {
-        System.out.printf("Hello %s\n",species);
+        System.out.println("Hello pet");
     }
 
     public void makeUp(){

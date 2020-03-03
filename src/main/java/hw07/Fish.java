@@ -1,18 +1,10 @@
 package hw07;
 
-public abstract class Fish extends Pet {
-    public Fish(String nickname, int age) {
-        super(nickname, age);
+public class Fish extends Pet {
+    public Fish(String nickname,Species species, int age) {
+        super(nickname,species, age);
     }
-    public Fish(){
-        super();
-    }
-
-    String species=Species.Fish.name();
-    @Override
-    public void eat() {
-        System.out.printf("%s eats grass\n",species);
-    }
+    public Fish(){ this.species=Species.Fish; }
 
     @Override
     public void respond() {

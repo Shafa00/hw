@@ -1,18 +1,13 @@
 package hw07;
 
 public class RoboCat extends Pet {
-    public RoboCat(String nickname, int age) {
-        super(nickname, age);
+    public RoboCat(String nickname,Species species, int age) {
+        super(nickname,species, age);
     }
-    public RoboCat(){}
+    public RoboCat(){this.species=Species.RoboCat;}
 
     @Override
     public void foul() {
-        System.out.println("none");
-    }
-
-    @Override
-    public void eat() {
         System.out.println("none");
     }
 

@@ -6,10 +6,7 @@ public class Main {
         dog.eat();
         dog.respond();
         dog.foul();
-        Pet fish=new Fish() {
-            @Override
-            public void foul() {}
-        };
+        Pet fish=new Fish();
         fish.eat();
         fish.respond();
         Pet domestiCat=new DomestiCat();
@@ -20,6 +17,9 @@ public class Main {
         roboCat.eat();
         roboCat.foul();
         roboCat.respond();
+        Human human=new Human();
+        human.setSchedule(new String[][] {{DayOfWeek.Monday.name(),DayOfWeek.Friday.name()},{"work","rest"}});
+        System.out.println(human.toString());
 
     }
 

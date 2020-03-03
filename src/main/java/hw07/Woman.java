@@ -1,8 +1,8 @@
 package hw07;
 
-public class Woman extends Human {
-    public Woman(String Name, String Surname, int Year, int IQ, Human Mother, Human Father) {
-        super(Name, Surname, Year, IQ, Mother, Father);
+public final class Woman extends Human {
+    public Woman(String name, String surname, int year, int iq, String[][] schedule, Human mother, Human father) {
+        super(name, surname, year, iq, schedule, mother, father);
     }
 
     @Override
