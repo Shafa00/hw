@@ -34,5 +34,6 @@ class FamilyTest {
         Human child = new Human("Jack", "Karleone");
         testFamily.addChild(child);
         assertEquals(5, testFamily.countFamily());
+
     }
 }
