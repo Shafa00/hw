@@ -20,20 +20,31 @@ class FamilyTest {
     @Test
     void addChild() {
         Human child = new Human("Jack", "Karleone");
-        testFamily.addChild(child);
-        assertEquals(3, testFamily.children.length);
+        int expected=testFamily.countOfChild+1;
+        int actual=testFamily.addChild(child);
+        assertEquals(expected, actual);
     }
     @Test
     void deleteChild() {
+        boolean expected=true;
+        boolean actual=testFamily.deleteChild(0);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void deleteChild2() {
         Human child = new Human("Jack", "Karleone");
-        assertEquals(true, testFamily.deleteChild(0));
+        testFamily.deleteChild(0);
+        boolean expected=false;
+        boolean actual=testFamily.deleteChild(child);
+        assertEquals(expected, actual);
     }
 
     @Test
     void countOfFamily() {
-        Human child = new Human("Jack", "Karleone");
-        testFamily.addChild(child);
-        assertEquals(5, testFamily.countFamily());
+        addChild();
+        int actual=testFamily.countFamily();
+        assertEquals(6, actual);
 
     }
 }

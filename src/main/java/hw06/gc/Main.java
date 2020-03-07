@@ -18,7 +18,8 @@ public class Main {
         }
         Family family=new Family(mother, father, new Human[]{human});
         family.addChild(human);
-        System.out.println(family.deleteChild(0));
+        family.deleteChild(0);
+        family.deleteChild(human);
         System.out.println(family.countFamily());
     }
 }
