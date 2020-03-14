@@ -21,7 +21,7 @@ class FamilyTest {
     @Test
     void addChild() {
         Human child =new Human("Ann", "Karleone");
-        int expected=testFamily.countOfChild+1;
+        int expected=testFamily.children.size()+1;
         int actual=testFamily.addChild(child);
         assertEquals(expected, actual);
     }

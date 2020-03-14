@@ -20,6 +20,11 @@ public class Human {
         this.mother=mother;
         this.schedule=schedule;
     }
+    public Human(String name, String surname, int year){
+        this.name=name;
+        this.surname=surname;
+        this.year=year;
+    }
 
     public String[][] getSchedule() {
         return schedule;

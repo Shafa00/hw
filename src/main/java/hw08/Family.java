@@ -22,11 +22,9 @@ public class Family {
         this.children = children;
     }
 
-    int countOfChild=0;
     public int addChild(Human child){
         children.add(child);
-        countOfChild++;
-        return countOfChild;
+        return children.size();
     }
 
     public boolean deleteChild(int index){
