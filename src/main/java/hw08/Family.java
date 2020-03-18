@@ -28,7 +28,7 @@ public class Family {
     }
 
     public boolean deleteChild(int index){
-        children.remove(0);
+        children.remove(index);
         return true;
     }
 
