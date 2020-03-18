@@ -21,7 +21,7 @@ public class Main {
         Family fam=new Family();
         Family family=new Family(fam.getMother(),fam.getFather(),children);
         family.addChild(child);
-        family.deleteChild(0);
+        System.out.println(family.deleteChild(0));
         family.countFamily();
         System.out.println(pet.toString());
         System.out.println(human.toString());

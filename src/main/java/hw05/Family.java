@@ -76,16 +76,12 @@ public class Family {
 
     public boolean deleteChild(int index){
         if (index>=0 && index<children.length){
-            for (int i =0; i <children.length ; i++) {
-                if (i == index) {
-                    ///???
-                }
+            for (int i =index; i <children.length-1 ; i++) {
+               children[i]=children[i+1];
             }
             return true;
         }
-        else{
             return false;
-        }
     }
     public int countFamily(){
         return 2+children.length;
