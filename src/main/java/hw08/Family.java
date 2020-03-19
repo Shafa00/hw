@@ -28,8 +28,10 @@ public class Family {
     }
 
     public boolean deleteChild(int index){
+        if (index>=0 && index<children.size()){
         children.remove(index);
-        return true;
+        return true;}
+        return false;
     }
 
     public boolean deleteChild(Human child){
