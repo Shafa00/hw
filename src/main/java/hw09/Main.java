@@ -33,18 +33,18 @@ public class Main {
         family.pet.add(pet1);
         family.pet.add(pet2);
         family.addChild(human);
-        family.deleteChild(0);
+        family.addChild(human);
+        System.out.println(family.deleteChild(0));
         family.deleteChild(human);
         family.countFamily();
         System.out.println(family.toString());
 
-        System.out.println("*******************************");
         FamilyController familyController=new FamilyController();
 
         familyController.familyService.familyDAO.saveFamily(family);
 
         System.out.println(familyController.getAllFamilies());
-        System.out.println(familyController.displayAllFamilies());
+        familyController.displayAllFamilies();
         System.out.println(familyController.getFamiliesBiggerThan(3));
         System.out.println(familyController.getFamiliesLessThan(3));
         System.out.println(familyController.countFamiliesWithMemberNumber(3));

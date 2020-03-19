@@ -8,6 +8,7 @@ public class FamilyService {
     DAO<Family> familyDAO = new CollectionFamilyDao();
     List<Family> families = familyDAO.getAllFamilies();
 
+
     public List<Family> getAllFamilies() {
         return families;
     }

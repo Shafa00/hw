@@ -50,12 +50,14 @@ public class Family {
     }
 
     public boolean deleteChild(int index){
-        children.remove(0);
-        return true;
+        if (index>=0 && index<children.size()){
+        children.remove(index);
+        return true;}
+        return false;
     }
 
     public boolean deleteChild(Human child){
-        children.remove(new Human("Jenny","Karleone"));
+        children.remove(child);
         return true;
     }
 

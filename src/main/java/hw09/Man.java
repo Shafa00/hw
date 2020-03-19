@@ -14,6 +14,10 @@ public final class Man extends Human {
         super(name, surname, year);
     }
 
+    public Man(String name, String surname) {
+        super(name, surname);
+    }
+
     @Override
     public String greetPet() {
         return "Hello pet";
