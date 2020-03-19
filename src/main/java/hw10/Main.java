@@ -38,9 +38,9 @@ public class Main {
         family.pet.add(pet1);
         family.pet.add(pet2);
         family.addChild(human);
-        family.deleteChild(0);
-        family.deleteChild(human);
-        family.countFamily();
+        System.out.println(family.deleteChild(0));
+        System.out.println(family.deleteChild(human));
+        System.out.println(family.countFamily());
         System.out.println(family.toString());
 
         System.out.println("*******************************");
