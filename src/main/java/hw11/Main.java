@@ -25,7 +25,6 @@ public class Main {
         human.schedule.put(DayOfWeek.Sunday,"sleep");
 
         Human adHuman=new Human("Kate", "Morley", "20/04/2015", 93);
-        System.out.println("here");
         adHuman.describeAge();
         System.out.println(human.toString());
         System.out.println(adHuman.toString());
@@ -38,13 +37,12 @@ public class Main {
         family.children.add(0, human);
         family.pet.add(pet1);
         family.pet.add(pet2);
-        family.addChild(human);
-        family.deleteChild(0);
-        family.deleteChild(human);
+        System.out.println(family.addChild(human));
+        System.out.println(family.deleteChild(0));
+        System.out.println(family.deleteChild(human));
         family.countFamily();
         System.out.println(family.toString());
 
-        System.out.println("*******************************");
         FamilyController familyController=new FamilyController();
 
         familyController.familyService.familyDAO.saveFamily(family);
