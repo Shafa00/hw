@@ -40,8 +40,8 @@ public class Main {
         System.out.println(family.toString());
 
         FamilyController familyController=new FamilyController();
-
-        familyController.familyService.familyDAO.saveFamily(family);
+        CollectionFamilyDao familyDao = new CollectionFamilyDao();
+        familyDao.saveFamily(family);
 
         System.out.println(familyController.getAllFamilies());
         familyController.displayAllFamilies();

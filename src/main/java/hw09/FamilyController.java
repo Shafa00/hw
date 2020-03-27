@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class FamilyController {
-    FamilyService familyService=new FamilyService();
+    private FamilyService familyService=new FamilyService();
 
     public List<Family> getAllFamilies() {
         return familyService.getAllFamilies();

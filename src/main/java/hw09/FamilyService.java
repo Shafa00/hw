@@ -1,11 +1,12 @@
 package hw09;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
 public class FamilyService {
-    DAO<Family> familyDAO = new CollectionFamilyDao();
+    private DAO<Family> familyDAO = new CollectionFamilyDao();
     List<Family> families = familyDAO.getAllFamilies();
 
 
@@ -64,12 +65,13 @@ public class FamilyService {
     }
 
     public void deleteAllChildrenOlderThen(int age){
-        int today = 2020;
+        int today = LocalDate.now().getYear();
         for (Family family: families) {
             family.getChildren().removeIf(child -> age > (today-child.getYear()));
             familyDAO.saveFamily(family);
         }
     }
+
     public int count(){
         return families.size();
     }

@@ -21,7 +21,8 @@ class FamilyServiceTest {
     @BeforeEach
     void setUp() {
         this.testFamilyService = new FamilyService();
-        this.testFamilyService.familyDAO.saveFamily(family);
+        CollectionFamilyDao familyDao = new CollectionFamilyDao();
+        familyDao.saveFamily(family);
     }
 
     @Test
