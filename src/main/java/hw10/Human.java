@@ -1,11 +1,9 @@
 package hw10;
 
 import java.text.DateFormat;
-import java.text.Format;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Period;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 import java.time.LocalDate;
@@ -52,41 +50,26 @@ public class Human {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getSurname() {
         return surname;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
 
     public long getYear() {
         return birthDate;
     }
 
-    public void setYear(long year) {
-        this.birthDate = year;
-    }
 
     public HashMap<DayOfWeek, String> getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(HashMap<DayOfWeek, String> schedule) {
-        this.schedule = schedule;
-    }
-
-    public void describeAge() {
+    public String describeAge() {
         LocalDate finish = LocalDate.now();
         LocalDate start = LocalDate.of(2016, 3, 20);
         Period period = Period.between(start, finish);
-        System.out.println("Years:" + period.getYears());
-        System.out.println("Months:" + period.getMonths());
-        System.out.println("Days:" + period.getDays());
+        return String.format("Years: %d\nMonths:%d\nDays:%d",period.getYears(),period.getMonths(),period.getDays());
     }
 
     @Override
