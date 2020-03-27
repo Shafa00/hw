@@ -78,13 +78,11 @@ public class Human {
         this.schedule = schedule;
     }
 
-    public void describeAge() {
+    public String describeAge() {
         LocalDate finish = LocalDate.now();
         LocalDate start = LocalDate.of(2016, 3, 20);
         Period period = Period.between(start, finish);
-        System.out.println("Years:" + period.getYears());
-        System.out.println("Months:" + period.getMonths());
-        System.out.println("Days:" + period.getDays());
+        return String.format("Years: %d\nMonths:%d\nDays:%d",period.getYears(),period.getMonths(),period.getDays());
     }
 
     @Override

@@ -15,20 +15,17 @@ public class FamilyService {
     }
 
     public List<Family> displayAllFamilies() {
-        return families.stream().collect(Collectors.toList());
+        return families;
     }
 
     public List<Family> getFamiliesBiggerThan(int count) {
-        ArrayList<Family> bigFamily = families.stream().filter(family -> family.countFamily() > count).collect(Collectors.toCollection(ArrayList::new));
-        return bigFamily;
+        return families.stream().filter(family -> family.countFamily() > count).collect(Collectors.toCollection(ArrayList::new));
     }
     public List<Family> getFamiliesLessThan(int count) {
-        ArrayList<Family> littleFamily = families.stream().filter(family -> family.countFamily() < count).collect(Collectors.toCollection(ArrayList::new));
-        return littleFamily;
+        return families.stream().filter(family -> family.countFamily() < count).collect(Collectors.toCollection(ArrayList::new));
     }
     public List<Family> countFamiliesWithMemberNumber(int count) {
-        ArrayList<Family> equalFamily = families.stream().filter(family -> family.countFamily() == count).collect(Collectors.toCollection(ArrayList::new));
-        return equalFamily;
+        return families.stream().filter(family -> family.countFamily() == count).collect(Collectors.toCollection(ArrayList::new));
     }
     public Family createNewFamily(Woman woman, Man man){
         ArrayList<Human> children=new ArrayList<>();

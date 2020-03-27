@@ -24,8 +24,8 @@ public class Main {
         human.schedule.put(DayOfWeek.Friday,"walk");
         human.schedule.put(DayOfWeek.Sunday,"sleep");
 
+        System.out.println(human.describeAge());
         Human adHuman=new Human("Kate", "Morley", "20/04/2015", 93);
-        adHuman.describeAge();
         System.out.println(human.toString());
         System.out.println(adHuman.toString());
 
